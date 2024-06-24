@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "COSMOSDB_CONNECTION_STRING": "AccountEndpoint=https://ltresume.documents.azure.com:443/;AccountKey=21mmmv5uV2pb22aCBn2vP7Nz1AajMzEshvcbVBjBOROhT1sYTwvRKkcSc6e5fEZLIY2sdb6OrFYvACDbA3f6mQ==;",
+    "AZURE_FUNCTION_PROXY_DISABLE_LOCAL_CALL": true
+  }, 
+  "Host": {
+    "CORS": "*"}
+}
