@@ -15,13 +15,14 @@ The challenge included:
 
 - Creating an API using Azure Functions with an HTTP trigger written in Python.
 
-- Test the Python code and Azure Function
+- Test the Python code and Azure Function.
 
-- Using Source control
+- Use Source control.
 
-- Create CI/CD Pipeline for both the backend and frontend
+- Create CI/CD Pipeline for both the backend and frontend.
 
 The tools I used for this were:
 - VSCode
 - Python
 - HTML/CSS
+- GitHub
