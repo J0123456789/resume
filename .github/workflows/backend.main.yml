@@ -10,7 +10,7 @@ on:
 
 env:
   COSMOSDB_CONNECTION_STRING: ${{ secrets.COSMOSDB_CONNECTION_STRING }} 
-  AZURE_FUNCTIONAPP_NAME: 'getcounter123'
+  AZURE_FUNCTIONAPP_NAME: '/counter/main'
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'backend'
   PYTHON_VERSION: '3.11'
 
@@ -45,7 +45,7 @@ jobs:
     - name: Run Unit Test
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/getcounter123'
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/counter/main'
         pytest -v -s
 
     - name: 'Run Azure Functions Action'
@@ -53,7 +53,7 @@ jobs:
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/getcounter123'
+        package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/counter/main'
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
         scm-do-build-during-deployment: true
         enable-oryx-build: true
