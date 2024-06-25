@@ -8,7 +8,7 @@ import pytest
 def test_function_app():
     cosmos_db_connection_string = os.environ.get("COSMOSDB_CONNECTION_STRING")
     if not cosmos_db_connection_string:
-        raise ValueError("COSMOSDB_CONNECTION_STRING environment variable is not set")
+        raise ValueError("COSMOSDB_CONNECTION_STRING environment variable is not set correctly.")
 
     # Simulate an HTTP GET request
     req = HttpRequest(method="GET", url="/api/main", body=None, headers={}, params={})
