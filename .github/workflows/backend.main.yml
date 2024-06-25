@@ -45,7 +45,7 @@ jobs:
     - name: Run Unit Test
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/counter/main'
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/counter/test_counter.py'
         pytest -v -s
 
     - name: 'Run Azure Functions Action'
