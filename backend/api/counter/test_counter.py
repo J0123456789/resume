@@ -15,7 +15,7 @@ def test_function_app():
     response = main(req)
 
     # Assert the response status code
-    assert response.status_code == 200, "Expected HTTP status code 200 GOOD"
+    assert response.status_code == 200, "Expected HTTP status code 200 OK"
 
     # Assert the response content type
     assert response.headers["Content-Type"] == "application/json", "Expected Content-Type to be application/json"
