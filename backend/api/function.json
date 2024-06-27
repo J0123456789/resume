@@ -1,0 +1,29 @@
+{
+    "scriptFile": "function_app.py",
+    "bindings": [
+      {
+        "authLevel": "anonymous",
+        "type": "httpTrigger",
+        "direction": "in",
+        "name": "req",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      {
+        "type": "cosmosDB",
+        "direction": "out",
+        "name": "doc",
+        "databaseName": "Resume",
+        "collectionName": "Counter",
+        "createIfNotExists": "false",
+        "connectionStringSetting": "COSMOSDBCONNECTIONSTRING"
+      },
+      {
+        "type": "http",
+        "direction": "out",
+        "name": "$return"
+      }
+    ]
+  }
